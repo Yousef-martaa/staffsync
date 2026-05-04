@@ -1,0 +1,26 @@
+{
+  "name": "staffsync",
+  "version": "1.0.0",
+  "description": "A fullstack employee management system.",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd client && npm run dev",
+    "server": "cd server && npx nodemon server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yousef-martaa/staffsync.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Yousef-martaa/staffsync/issues"
+  },
+  "homepage": "https://github.com/Yousef-martaa/staffsync#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
