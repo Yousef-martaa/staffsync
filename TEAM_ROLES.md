@@ -4,7 +4,7 @@
 
 ### 1. Users
 
- Responsible: Yousef (Person 1)
+ Responsible: Yousef 
 
 CRUD:
 
@@ -26,12 +26,17 @@ Additional Responsibilities:
 - MongoDB Atlas connection
 - GitHub repository setup
 - Backend architecture setup
+- Home page
+- Creating Logo for the project
+- Creating the public landing page.
+
+
 
 ---
 
 ### 2. Tasks
 
- Responsible: Morgan (Person 2)
+ Responsible: Morgan
 
 CRUD:
 
@@ -50,7 +55,7 @@ Features:
 
 ### 3. Leaves
 
- Responsible: Farouk (Person 3)
+ Responsible: Farouk 
 
 CRUD:
 
@@ -68,7 +73,7 @@ Features:
 
 ### 4. WorkHours
 
- Responsible: Farouk (Person 3)
+ Responsible: Farouk 
 
 CRUD:
 
@@ -86,7 +91,7 @@ Features:
 
 ### 5. Salaries
 
- Responsible: Farouk (Person 3)
+ Responsible: Farouk
 
 CRUD:
 
