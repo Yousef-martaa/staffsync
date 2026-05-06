@@ -50,6 +50,7 @@ Features:
 - assign employee
 - filtering
 - task status
+-  Dashboard for the Admin
 
 ---
 
@@ -80,7 +81,7 @@ CRUD:
 -  Create → add work hours
 -  Read → view records
 -  Update → edit hours
--  Delete → optional
+-  Delete → delete work hours
 
 Features:
 
@@ -98,7 +99,7 @@ CRUD:
 -  Create → generate salary
 -  Read → salary details
 -  Update → update bonus/deductions
--  Delete → optional
+-  Delete → Salary deduct
 
 Features:
 
