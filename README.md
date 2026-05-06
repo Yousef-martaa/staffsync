@@ -27,12 +27,25 @@ StaffSync is a fullstack employee management system designed to help companies m
 - Task management
 - Salary management
 
+## Current Features
+- Secure user signup with password hashing
+- Duplicate email validation
+- REST API structure
+- MongoDB integration
+- Role field support
+
 ## Project Structure
 
 ```bash
 staffsync/
 ├── client/
 ├── server/
+│   ├── config/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   └── services/
 ├── package.json
 └── README.md
 ```
