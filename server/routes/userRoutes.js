@@ -1,9 +1,8 @@
-const express = require("express");
+import express from "express";
+import userController from "#controllers/userController";
 
 const router = express.Router();
 
-const userController = require("../controllers/userController");
-
 router.post("/", userController.createUser);
 
-module.exports = router;
+export default router;

@@ -9,7 +9,14 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
+  "imports": {
+    "#routes/*": "./routes/*.js",
+    "#controllers/*": "./controllers/*.js",
+    "#models/*": "./models/*.js",
+    "#services/*": "./services/*.js",
+    "#middleware/*": "./middleware/*.js"
+  },
   "dependencies": {
     "bcrypt": "^6.0.0",
     "bcryptjs": "^3.0.3",

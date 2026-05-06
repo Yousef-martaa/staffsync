@@ -41,7 +41,6 @@ function App() {
           </div>
         </div>
       </section>
-      
       <footer className="footer">
         <div className="footer-content">
           <span>support@staffsync.com</span>
