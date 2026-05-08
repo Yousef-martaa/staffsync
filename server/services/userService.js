@@ -18,6 +18,49 @@ const createUser = async (userData) => {
   return user;
 };
 
+
+const getUsers = async () => {
+  const users = await User.find();
+
+  return users;
+};
+
+const getUserById = async (userId) => {
+  const user = await User.findById(userId);
+  return user;
+};
+
+const updateUser = async (userId, userData) => {
+  const updatedUser = await User.findByIdAndUpdate(
+    userId,
+    userData,
+    { new: true }
+  );
+
+  return updatedUser;
+};
+
+const replaceUser = async (userId, userData) => {
+  const replacedUser = await User.findOneAndReplace(
+    { _id: userId },
+    userData,
+    { new: true }
+  );
+
+  return replacedUser;
+};
+
+const deleteUser = async (userId) => {
+  const deletedUser = await User.findByIdAndDelete(userId);
+
+  return deletedUser;
+};
+
 export default {
   createUser,
+  getUsers,
+  getUserById,
+  updateUser,
+  replaceUser,
+  deleteUser,
 };
