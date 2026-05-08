@@ -33,6 +33,8 @@ StaffSync is a fullstack employee management system designed to help companies m
 - REST API structure
 - MongoDB integration
 - Role field support
+- Full User CRUD operations
+- PATCH and PUT user update support
 
 ## Project Structure
 
