@@ -1,5 +1,6 @@
 import User from "#models/User";
 import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
 
 const createUser = async (userData) => {
   const existingUser = await User.findOne({
@@ -56,6 +57,30 @@ const deleteUser = async (userId) => {
   return deletedUser;
 };
 
+const loginUser = async (email, password) => {
+  const user = await User.findOne({ email });
+
+  if (!user) {
+    throw new Error("Invalid email or password");
+  }
+
+  const isPasswordCorrect = await bcrypt.compare(
+    password,
+    user.password
+  );
+
+  if (!isPasswordCorrect) {
+    throw new Error("Invalid email or password");
+  }
+
+  return {
+    _id: user._id,
+    fullName: user.fullName,
+    email: user.email,
+    role: user.role,
+  };
+};
+
 export default {
   createUser,
   getUsers,
@@ -63,4 +88,5 @@ export default {
   updateUser,
   replaceUser,
   deleteUser,
+  loginUser,
 };
