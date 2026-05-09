@@ -110,6 +110,21 @@ const deleteUser = async (req, res) => {
   }
 };
 
+const loginUser = async (req, res) => {
+  try {
+    const user = await userService.loginUser(
+      req.body.email,
+      req.body.password
+    );
+
+    res.status(200).json(user);
+  } catch (error) {
+    res.status(401).json({
+      message: error.message,
+    });
+  }
+};
+
 export default {
   createUser,
   getUsers,
@@ -117,4 +132,5 @@ export default {
   updateUser,
   replaceUser,
   deleteUser,
+  loginUser,
 };
