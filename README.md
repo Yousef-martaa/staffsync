@@ -18,8 +18,6 @@ StaffSync is a fullstack employee management system designed to help companies m
 - Mongoose
 
 ## Features Planned
-
-- User authentication
 - Role-based access control
 - Employee management
 - Work hours tracking
@@ -35,6 +33,9 @@ StaffSync is a fullstack employee management system designed to help companies m
 - Role field support
 - Full User CRUD operations
 - PATCH and PUT user update support
+- User login authentication
+- Password verification using bcrypt
+- Secure login response without password exposure
 
 ## Project Structure
 
