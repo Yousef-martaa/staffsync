@@ -36,6 +36,11 @@ StaffSync is a fullstack employee management system designed to help companies m
 - User login authentication
 - Password verification using bcrypt
 - Secure login response without password exposure
+- Secure JWT authentication
+- Protected API routes using middleware
+- JWT token verification
+- Unauthorized access handling
+- Environment-based secret key management
 
 ## Project Structure
 
