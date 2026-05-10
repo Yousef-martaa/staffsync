@@ -73,14 +73,27 @@ const loginUser = async (email, password) => {
     throw new Error("Invalid email or password");
   }
 
+  const token = jwt.sign(
+    {
+      userId: user._id,
+      role: user.role,
+    },
+    process.env.JWT_SECRET,
+    {
+      expiresIn: "7d",
+    }
+  );
+
   return {
-    _id: user._id,
-    fullName: user.fullName,
-    email: user.email,
-    role: user.role,
+    token,
+    user: {
+      _id: user._id,
+      fullName: user.fullName,
+      email: user.email,
+      role: user.role,
+    },
   };
 };
-
 export default {
   createUser,
   getUsers,
