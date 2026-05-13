@@ -3,6 +3,9 @@ import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import userRoutes from "#routes/userRoutes";
+import leaveRoutes from "#routes/leaveRoutes";
+import workHourRoutes from "#routes/workHourRoutes";
+import salaryRoutes from "#routes/salaryRoutes";
 
 dotenv.config();
 
@@ -12,6 +15,9 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/users", userRoutes);
+app.use("/api/leaves", leaveRoutes);
+app.use("/api/workhours", workHourRoutes);
+app.use("/api/salaries", salaryRoutes);
 
 mongoose
   .connect(process.env.MONGO_URI)
