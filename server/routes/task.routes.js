@@ -1,8 +1,18 @@
 // filename: server/routes/task.routes.js
 
-/*
-Defines all API endpoints for tasks.
+import express from "express";
 
-This file connects HTTP routes to controller functions and applies
-authentication and role-based middleware where needed.
+const router = express.Router();
+
+/*
+Basic placeholder routes for tasks.
+
+This file currently only prevents server crashes by providing
+a valid router export. Real endpoints will be implemented later.
 */
+
+router.get("/", (req, res) => {
+	res.send("Task route is working");
+});
+
+export default router;
