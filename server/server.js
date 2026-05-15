@@ -6,6 +6,7 @@ import userRoutes from "#routes/userRoutes";
 import leaveRoutes from "#routes/leaveRoutes";
 import workHourRoutes from "#routes/workHourRoutes";
 import salaryRoutes from "#routes/salaryRoutes";
+import taskRoutes from "#routes/taskRoutes";
 
 dotenv.config();
 
@@ -35,6 +36,7 @@ app.use("/api/users", userRoutes);
 app.use("/api/leaves", leaveRoutes);
 app.use("/api/workhours", workHourRoutes);
 app.use("/api/salaries", salaryRoutes);
+app.use("/api/tasks", taskRoutes);
 
 mongoose
   .connect(process.env.MONGO_URI)
