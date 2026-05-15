@@ -4,10 +4,10 @@
   "description": "A fullstack employee management system.",
   "main": "index.js",
   "scripts": {
-    "client": "cd client && npm run dev",
-    "server": "cd server && npx nodemon server.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
-  },
+  "client": "npm run dev --prefix client",
+  "server": "npm start --prefix server",
+  "dev": "concurrently \"npm run server\" \"npm run client\""
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Yousef-martaa/staffsync.git"
