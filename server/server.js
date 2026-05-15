@@ -6,7 +6,7 @@ import userRoutes from "#routes/userRoutes";
 import leaveRoutes from "#routes/leaveRoutes";
 import workHourRoutes from "#routes/workHourRoutes";
 import salaryRoutes from "#routes/salaryRoutes";
-import taskRoutes from "#routes/taskRoutes";
+import taskRoutes from "#routes/task.routes";
 
 dotenv.config();
 

@@ -1,4 +1,4 @@
-// filename: server/routes/task.routes.js
+// filename: server/routes/taskRoutes.js
 
 import express from "express";
 
@@ -12,7 +12,7 @@ a valid router export. Real endpoints will be implemented later.
 */
 
 router.get("/", (req, res) => {
-	res.send("Task route is working");
+res.send("Task route is working");
 });
 
 export default router;
