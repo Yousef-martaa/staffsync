@@ -1,32 +1,17 @@
 import { Link } from "react-router-dom";
 
 import "../../App.css";
-import logo from "../../assets/logo.png";
-
+import Navbar from "../../components/Navbar/Navbar";
 export default function Home() {
+
+  const token = localStorage.getItem("token");
+
   return (
     <div className="app">
       <div className="background-glow glow-1"></div>
       <div className="background-glow glow-2"></div>
 
-      <nav className="navbar">
-        <div className="logo-container">
-          <img src={logo} alt="StaffSync Logo" className="logo-img" />
-          <div className="brand-text">
-            <h2>SYNC PEOPLE</h2>
-            <h2>MANAGE BETTER</h2>
-          </div>
-        </div>
-
-        <div className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/pos">POS</Link>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
-          <button className="login-btn">Login</button>
-          <button className="start-btn">Sign Up</button>
-        </div>
-      </nav>
+      <Navbar />
 
       <section className="hero">
         <div className="hero-content">
@@ -35,9 +20,18 @@ export default function Home() {
             Track employees, tasks, salaries, work hours, and leave requests in
             one modern platform.
           </p>
+
           <div className="hero-buttons">
-            <button className="primary-btn">Get Started</button>
-            <button className="secondary-btn">Learn More</button>
+            {token ? (
+              <p className="welcome-text">Welcome back to StaffSync</p>
+            ) : (
+              <>
+                <Link to="/login" className="primary-btn">
+                  Get Started
+                </Link>
+                <button className="secondary-btn">Learn More</button>
+              </>
+            )}
           </div>
         </div>
       </section>
