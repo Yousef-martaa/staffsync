@@ -94,6 +94,12 @@ const loginUser = async (email, password) => {
     },
   };
 };
+
+const getCurrentUser = async (userId) => {
+  const user = await User.findById(userId).select("-password");
+
+  return user;
+};
 export default {
   createUser,
   getUsers,
@@ -102,4 +108,5 @@ export default {
   replaceUser,
   deleteUser,
   loginUser,
+  getCurrentUser,
 };

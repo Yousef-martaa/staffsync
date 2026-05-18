@@ -9,8 +9,6 @@ router.post("/", userController.createUser);
 
 router.get("/", authMiddleware, userController.getUsers);
 
-router.get("/:id", authMiddleware, userController.getUserById);
-
 router.patch("/:id", authMiddleware, userController.updateUser);
 
 router.put("/:id", authMiddleware, userController.replaceUser);
@@ -18,5 +16,14 @@ router.put("/:id", authMiddleware, userController.replaceUser);
 router.delete("/:id", authMiddleware, roleMiddleware("manager", "hr"), userController.deleteUser);
 
 router.post("/login", userController.loginUser);
+
+router.get(
+  "/me",
+  authMiddleware,
+  userController.getCurrentUser
+);
+
+router.get("/:id", authMiddleware, userController.getUserById);
+
 
 export default router;
