@@ -43,6 +43,10 @@ StaffSync is a fullstack employee management system designed to help companies m
 - Role-based authorization system
 - Manager and HR route protection
 - Forbidden access handling for unauthorized users
+- Current logged-in user profile route
+- Protected /api/users/me endpoint
+- Automatic user identification using JWT token
+- Secure current user data retrieval without password exposure
 
 ## Project Structure
 
