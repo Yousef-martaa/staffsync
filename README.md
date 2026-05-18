@@ -47,6 +47,12 @@ StaffSync is a fullstack employee management system designed to help companies m
 - Protected /api/users/me endpoint
 - Automatic user identification using JWT token
 - Secure current user data retrieval without password exposure
+- Frontend login page
+- Login form connected to backend authentication API
+- JWT token storage in browser localStorage
+- Login validation and user-friendly error handling
+- Dynamic Navbar based on login status
+- Reusable Navbar component
 
 ## Project Structure
 
