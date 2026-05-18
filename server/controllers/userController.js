@@ -125,6 +125,20 @@ const loginUser = async (req, res) => {
   }
 };
 
+const getCurrentUser = async (req, res) => {
+  try {
+    const user = await userService.getCurrentUser(
+      req.user.userId
+    );
+
+    res.status(200).json(user);
+  } catch (error) {
+    res.status(500).json({
+      message: "Internal server error",
+    });
+  }
+};
+
 export default {
   createUser,
   getUsers,
@@ -133,4 +147,5 @@ export default {
   replaceUser,
   deleteUser,
   loginUser,
+  getCurrentUser,
 };
