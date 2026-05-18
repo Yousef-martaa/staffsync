@@ -53,12 +53,31 @@ StaffSync is a fullstack employee management system designed to help companies m
 - Login validation and user-friendly error handling
 - Dynamic Navbar based on login status
 - Reusable Navbar component
+- Frontend signup page
+- Signup form connected to backend user creation API
+- Signup validation for full name, company email, and password
+- Duplicate email error handling in signup form
+- Signup success redirect to login page
+- Default employee role assignment from backend user model
 
 ## Project Structure
 
 ```bash
 staffsync/
 ├── client/
+│   └── src/
+│       ├── assets/
+│       ├── components/
+│       │   └── Navbar/
+│       ├── pages/
+│       │   ├── Home/
+│       │   ├── Login/
+│       │   ├── Signup/
+│       │   └── POS/
+│       ├── routes/
+│       ├── App.css
+│       ├── App.tsx
+│       └── main.tsx
 ├── server/
 │   ├── config/
 │   ├── controllers/
